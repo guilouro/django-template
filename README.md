@@ -7,7 +7,7 @@ This is a simple boilerplate for django projects
 
 This assumes you have pip and django 1.7 installed (if not, try `$ pip install django`)
 
-    $ django-admin.py startproject --template https://github.com/guilouro/django-boilerplate.git project_name .
+    $ django-admin.py startproject --template https://github.com/guilouro/django-boilerplate/archive/master.zip project_name .
     $ pip install -r requirements.txt
     $ python manage.py migrate
 
