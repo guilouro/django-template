@@ -1,4 +1,4 @@
 Unipath==1.0
 dj-database-url==0.3.0
 django==1.7
-html5lib==0.99999
+django-htmlmin
