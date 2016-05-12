@@ -79,9 +79,24 @@ USE_L10N = True
 USE_TZ = True
 
 # Template path
-TEMPLATE_DIRS = (
-    BASE_DIR.parent.child('templates'),
-)
+TEMPLATES = [{
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [BASE_DIR.parent.child('templates')],
+    'APP_DIRS': True,
+    'OPTIONS': {
+        'context_processors': [
+            # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+            # list if you haven't customized them:
+            'django.contrib.auth.context_processors.auth',
+            'django.template.context_processors.debug',
+            'django.template.context_processors.i18n',
+            'django.template.context_processors.media',
+            'django.template.context_processors.static',
+            'django.template.context_processors.tz',
+            'django.contrib.messages.context_processors.messages',
+        ],
+    },
+}]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
@@ -98,6 +113,6 @@ STATIC_URL = '/static/'
 # load settings_local.py if exists
 ####################################
 try:
-    execfile(BASE_DIR.child('settings_local.py'), globals(), locals())
+    exec(open(BASE_DIR.child('settings_local.py')).read(), globals(), locals())
 except IOError:
     pass
