@@ -1,11 +1,11 @@
 Django Boilerplate
-=========================== 
+===========================
 
 This is a simple boilerplate for django projects
 
 ### Usage
 
-This assumes you have pip and django 1.9 installed (if not, try `$ pip install django==1.9`)
+This assumes you have pip and django 1.10 installed (if not, try `$ pip install django==1.10`)
 
     $ django-admin.py startproject --template https://github.com/guilouro/django-boilerplate/archive/master.zip project_name .
     $ pip install -r requirements.txt
